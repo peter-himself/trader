@@ -1,9 +1,10 @@
 <template>
     <div>
-        
+        <app-stock v-for="(stock, index) in stocks" :key="index"></app-stock>
     </div>
 </template>
 <script>
+import Stock from "./Stock.vue"
 export default {
     data() {
         return {
@@ -14,6 +15,9 @@ export default {
                 {id: 4, name: "Facebook", price: 180},
             ]
         }
+    },
+    components: {
+        appStock: Stock,
     }
 }
 </script>
